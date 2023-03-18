@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --facebook-color: #1877f2;
+    --twitter-color: rgb(29, 155, 240);
+    --instagram-color: #E1306C;
+    --youtube-color: #FF0000;
+    --linkedin-color: #0077B5;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(25, 24, 24);
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    z-index: 1;
+}
+
+li {
+    position: relative;
+    display: block;
+    color: #666;
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    background: #171515;
+    line-height: 60px;
+    border-radius: 50%;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+li::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    transform: scale(0.9);
+    z-index: -1;
+    transition: .5s;
+}
+
+li:hover::before {
+    filter: blur(3px);
+    transform: scale(1.2);
+}
+
+.facebook::before {
+    background: var(--facebook-color);
+}
+
+.facebook:hover::before {
+    box-shadow: 0 0 15px var(--facebook-color);
+}
+
+.facebook:hover {
+    color: var(--facebook-color);
+    box-shadow: 0 0 15px var(--facebook-color);
+    text-shadow: 0 0 15px var(--facebook-color);
+}
+
+.twitter::before {
+    background: var(--twitter-color);
+}
+
+.twitter:hover::before {
+    box-shadow: 0 0 15px var(--twitter-color);
+}
+
+.twitter:hover {
+    color: var(--twitter-color);
+    box-shadow: 0 0 15px var(--twitter-color);
+    text-shadow: 0 0 15px var(--twitter-color);
+}
+
+.instagram::before {
+    background: var(--instagram-color);
+}
+
+.instagram:hover::before {
+    box-shadow: 0 0 15px var(--instagram-color);
+}
+
+.instagram:hover {
+    color: var(--instagram-color);
+    box-shadow: 0 0 15px var(--instagram-color);
+    text-shadow: 0 0 15px var(--instagram-color);
+}
+
+.linkedin::before {
+    background: var(--linkedin-color);
+}
+
+.linkedin:hover::before {
+    box-shadow: 0 0 15px var(--linkedin-color);
+}
+
+.linkedin:hover {
+    color: var(--linkedin-color);
+    box-shadow: 0 0 15px var(--linkedin-color);
+    text-shadow: 0 0 15px var(--linkedin-color);
+}
+
+.youtube::before {
+    background: var(--youtube-color);
+}
+
+.youtube:hover::before {
+    box-shadow: 0 0 15px var(--youtube-color);
+}
+
+.youtube:hover {
+    color: var(--youtube-color);
+    box-shadow: 0 0 15px var(--youtube-color);
+    text-shadow: 0 0 15px var(--youtube-color);
+}
